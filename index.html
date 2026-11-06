@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velvet Flame · Taller artesanal de velas · Bogotá</title>
+<meta name="description" content="Velas hechas a mano en Bogotá: comestibles para tu mesa, aromáticas con forma de animalitos, de masaje, waxmelts, tipo postre y edición flores & cristal. Pedidos por WhatsApp.">
+<meta property="og:title" content="Velvet Flame · Taller artesanal de velas">
+<meta property="og:description" content="Cada vela cuenta una historia distinta: algunas se comen, otras se sienten, todas se disfrutan.">
+<meta property="og:image" content="images/tabla-brochure.jpg">
+<meta name="theme-color" content="#2a1d16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232a1d16'/%3E%3Cpath d='M32 14c6 8 9 13 9 19a9 9 0 0 1-18 0c0-6 3-11 9-19z' fill='%23e3a83c'/%3E%3Crect x='24' y='40' width='16' height='12' rx='2' fill='%23f3e6d0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fondo:#2a1d16; --fondo2:#352519; --tarjeta:#3b2a1e; --linea:rgba(243,230,208,.14);
+  --crema:#f3e6d0; --crema2:#d9c7ad; --dorado:#e3a83c; --dorado2:#f0c76a; --rojo:#c9423a; --wa:#25d366;
+  --serif:"Playfair Display",Georgia,serif; --sans:"Poppins",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--fondo);color:var(--crema);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* los hijos de las cuadrículas no pueden crecer más que su columna (si no, una foto grande abre la página a lo ancho en celular) */
+.hero .wrap>*,.detalle>*,.pedido>*,.lineas>*,.media>*,.galeria>*,.pasos>*{min-width:0}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
+.kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--dorado);font-weight:500}
+.kicker b{color:var(--crema2);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:500;font-size:14px;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn-oro{background:var(--dorado);color:#2a1d16}
+.btn-oro:hover{background:var(--dorado2)}
+.btn-borde{border-color:var(--crema2);color:var(--crema)}
+.btn-borde:hover{background:rgba(243,230,208,.08)}
+.btn-wa{background:var(--wa);color:#0b2a16}
+.btn-wa:hover{filter:brightness(1.08)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(42,29,22,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.01em}
+.logo i{font-style:italic;color:var(--dorado);font-weight:500}
+nav ul{display:none;gap:22px;list-style:none;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--crema2)}
+nav ul a:hover{color:var(--dorado)}
+nav .btn{padding:9px 16px;font-size:13px}
+@media(min-width:900px){nav ul{display:flex}}
+
+/* hero */
+.hero{padding:56px 0 40px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero{padding:80px 0 64px}.hero .wrap{grid-template-columns:1.05fr 1fr;gap:48px}}
+.hero h1{font-size:clamp(40px,7vw,68px);margin:14px 0 18px}
+.hero h1 i{color:var(--dorado);font-weight:500}
+.hero p.lead{font-size:17px;color:var(--crema2);max-width:52ch}
+.hero blockquote{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--crema2);border-left:2px solid var(--dorado);padding-left:16px;margin:22px 0}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.hero figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);aspect-ratio:4/3}
+.hero figure img{width:100%;height:100%;object-fit:cover}
+.hero figcaption{position:absolute;left:14px;bottom:14px;background:rgba(42,29,22,.82);backdrop-filter:blur(6px);padding:8px 14px;border-radius:999px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dorado2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--linea);border-radius:10px;color:var(--crema2);font-weight:500}
+.chips a:hover{border-color:var(--dorado);color:var(--dorado)}
+
+/* secciones */
+section{padding:64px 0}
+@media(min-width:900px){section{padding:88px 0}}
+.titulo{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.titulo:before,.titulo:after{content:"";flex:1;height:1px;background:var(--linea)}
+.titulo span{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--dorado);font-weight:500;text-align:center}
+.lineas{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:720px){.lineas{grid-template-columns:repeat(3,1fr)}}
+.linea{background:var(--tarjeta);border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;position:relative}
+.linea:hover{transform:translateY(-4px);border-color:rgba(227,168,60,.5)}
+.linea .num{position:absolute;top:12px;left:12px;background:rgba(42,29,22,.85);color:var(--dorado);font-size:11px;letter-spacing:.2em;padding:5px 9px;border-radius:8px;font-weight:500}
+.linea img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.linea .sin{aspect-ratio:4/3;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,#5a3d28,#3b2a1e 70%);font-size:56px}
+.linea .txt{padding:16px 16px 18px}
+.linea h3{font-size:19px;margin-bottom:6px}
+.linea p{font-size:13.5px;color:var(--crema2)}
+.linea .tag{display:inline-block;margin-top:10px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rojo);font-weight:600;filter:brightness(1.4)}
+
+.detalle{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.detalle{grid-template-columns:1fr 1fr;gap:56px}.detalle.inv>.media{order:2}}
+.detalle h2{font-size:clamp(28px,4vw,40px);margin:12px 0 16px}
+.detalle p{color:var(--crema2);margin-bottom:12px;max-width:50ch}
+.detalle ul{list-style:none;margin:14px 0 18px;color:var(--crema2);font-size:15px}
+.detalle li{padding:5px 0 5px 22px;position:relative}
+.detalle li:before{content:"—";position:absolute;left:0;color:var(--dorado)}
+.detalle .nota{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado2);font-weight:500;margin-top:10px}
+.media{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.media a{display:block;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#1f1510}
+.media a img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.media a:hover img{transform:scale(1.05)}
+.media a.grande{grid-column:span 2;aspect-ratio:16/10}
+.media.tres{grid-template-columns:repeat(3,1fr)}
+.media.tres a{aspect-ratio:1}
+
+.galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:720px){.galeria{grid-template-columns:repeat(3,1fr)}}
+.galeria a{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#1f1510}
+.galeria a img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.galeria a:hover img{transform:scale(1.06)}
+.galeria a span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--crema);background:linear-gradient(transparent,rgba(42,29,22,.9))}
+
+.pasos{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:720px){.pasos{grid-template-columns:repeat(3,1fr)}}
+.paso{padding:22px 20px;border:1px solid var(--linea);border-radius:18px;background:var(--fondo2)}
+.paso .rom{font-family:var(--serif);font-style:italic;color:var(--dorado);font-size:26px}
+.paso h3{font-size:18px;margin:8px 0 6px}
+.paso p{font-size:14px;color:var(--crema2)}
+
+.ideal{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:18px 20px;border:1px solid var(--linea);border-radius:18px;background:var(--fondo2)}
+.ideal em{font-family:var(--serif);color:var(--dorado);margin-right:6px}
+.ideal span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--linea);border-radius:999px;font-weight:500}
+
+/* pedidos */
+.pedido{max-width:640px;margin-inline:auto;text-align:center}
+.pedido p{margin-inline:auto}
+.contacto{display:grid;gap:12px;margin-top:18px}
+.contacto a{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--linea);border-radius:16px;background:var(--fondo2);text-align:left}
+.contacto a:hover{border-color:var(--dorado)}
+.contacto .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(227,168,60,.14);color:var(--dorado);flex:none}
+.contacto .ic svg{width:22px;height:22px}
+.contacto b{display:block;font-weight:500;font-size:16px}
+.contacto small{color:var(--crema2);font-size:12.5px}
+
+footer{border-top:1px solid var(--linea);padding:28px 0 90px;font-size:12.5px;color:var(--crema2)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}
+@media(min-width:900px){footer{padding-bottom:32px}}
+
+/* whatsapp flotante */
+.flot{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;align-items:center;gap:10px;background:var(--wa);color:#0b2a16;padding:12px 18px 12px 14px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 14px 30px -8px rgba(0,0,0,.6)}
+.flot svg{width:22px;height:22px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(20,12,8,.94);display:none;align-items:center;justify-content:center;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:88vh;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.lb .cerrar{position:absolute;top:14px;right:16px;color:var(--crema);font-size:34px;background:none;border:0;cursor:pointer;line-height:1}
+.lb .pie{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-family:var(--serif);font-style:italic;color:var(--crema2)}
+.lb .fl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(243,230,208,.12);border:0;color:var(--crema);font-size:28px;width:46px;height:46px;border-radius:50%;cursor:pointer}
+.lb .fl.izq{left:12px}.lb .fl.der{right:12px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Velvet <i>Flame</i></a>
+    <ul>
+      <li><a href="#lineas">Líneas</a></li>
+      <li><a href="#comestibles">Comestibles</a></li>
+      <li><a href="#animalitos">Animalitos</a></li>
+      <li><a href="#postre">Postre</a></li>
+      <li><a href="#flores">Flores &amp; cristal</a></li>
+      <li><a href="#pedidos">Pedidos</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/573133372841?text=Hola%20Velvet%20Flame%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.8.5a2.4 2.4 0 0 0 1.6-1.1c.2-.6.2-1 .1-1.1l-.5-.3z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Velvet Flame · <b>Taller artesanal de velas · Bogotá</b></div>
+      <h1>Velas que se encienden, <i>se sienten</i> y hasta se comen</h1>
+      <p class="lead">Velvet Flame es un taller hecho a mano en Bogotá dedicado a crear velas para cada momento: comestibles para tu mesa, aromáticas para decorar, de masaje para tu piel, waxmelts para perfumar tu espacio y ediciones tipo postre para consentir los sentidos. Todas elaboradas artesanalmente, en pequeños lotes.</p>
+      <blockquote>"Cada vela cuenta una historia distinta: algunas se comen, otras se sienten, todas se disfrutan."</blockquote>
+      <div class="acciones">
+        <a class="btn btn-oro" href="#lineas">Ver las líneas</a>
+        <a class="btn btn-borde" href="#pedidos">Hacer un pedido</a>
+      </div>
+      <div class="chips">
+        <a href="#comestibles">Comestibles</a><a href="#animalitos">Aromáticas</a><a href="#masaje">Para masaje</a><a href="#masaje">Waxmelts</a><a href="#postre">Tipo postre</a><a href="#flores">Flores &amp; cristal</a>
+      </div>
+    </div>
+    <figure>
+      <img src="images/tabla-brochure.jpg" alt="Vela comestible de mantequilla encendida en el centro de una tabla de quesos y embutidos" fetchpriority="high">
+      <figcaption>Se enciende · se derrite · se unta</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section id="lineas">
+  <div class="wrap">
+    <div class="titulo"><span>Nuestras seis líneas</span></div>
+    <div class="lineas">
+      <a class="linea" href="#comestibles">
+        <span class="num">01</span><img src="images/tabla-1.jpg" alt="Tabla de quesos con vela comestible" loading="lazy">
+        <div class="txt"><h3>Comestibles</h3><p>Mantequilla batida con hierbas finas que arde y luego se unta sobre pan.</p><span class="tag">Cenas íntimas · aniversarios</span></div>
+      </a>
+      <a class="linea" href="#animalitos">
+        <span class="num">02</span><img src="images/cocker-labrador.jpg" alt="Velas con forma de perritos cocker y labrador" loading="lazy">
+        <div class="txt"><h3>Aromáticas &amp; decorativas</h3><p>Figuras de animalitos en cera aromática, pintadas a mano, cada pieza única.</p><span class="tag">Regalos · detalles</span></div>
+      </a>
+      <a class="linea" href="#masaje">
+        <span class="num">03</span><div class="sin" aria-hidden="true">🕯️</div>
+        <div class="txt"><h3>Para masaje</h3><p>Se funden en un aceite tibio nutritivo, seguro para la piel.</p><span class="tag">Autocuidado · en pareja</span></div>
+      </a>
+      <a class="linea" href="#masaje">
+        <span class="num">04</span><div class="sin" aria-hidden="true">✨</div>
+        <div class="txt"><h3>Waxmelts</h3><p>Trozos de cera perfumada para quemadores: aroma intenso, sin llama sobre mecha.</p><span class="tag">Hogar · detalles pequeños</span></div>
+      </a>
+      <a class="linea" href="#postre">
+        <span class="num">05</span><img src="images/postre-brochure.jpg" alt="Vela tipo postre con fresas y chocolate" loading="lazy">
+        <div class="txt"><h3>Tipo postre</h3><p>Ediciones inspiradas en tu postre favorito: chocolate, frutos rojos y bizcocho.</p><span class="tag">Cumpleaños · mesas dulces</span></div>
+      </a>
+      <a class="linea" href="#flores">
+        <span class="num">06</span><img src="images/flores-vaso.jpg" alt="Velas en vaso de vidrio con girasol y margarita" loading="lazy">
+        <div class="txt"><h3>Flores &amp; cristal</h3><p>Vaso de vidrio, cera de color suave y flores talladas a mano. También textura tipo geoda.</p><span class="tag">Decoración · bodas · edición limitada</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="comestibles" style="background:var(--fondo2)">
+  <div class="wrap detalle">
+    <div>
+      <div class="kicker">01 · Velas comestibles</div>
+      <h2>Mantequilla que arde, y luego se saborea</h2>
+      <p>Elaboradas con mantequilla batida, hierbas finas y una mecha 100% segura para la mesa. Al encenderse se funden lentamente, listas para untar sobre pan artesanal.</p>
+      <p>Perfectas para acompañar tablas de embutidos, quesos y panes: el centro de mesa que también se come.</p>
+      <span class="nota">Ideal para cenas íntimas y aniversarios</span>
+      <div style="margin-top:22px"><a class="btn btn-oro" href="#pedidos" data-linea="Velas comestibles">Quiero una para mi mesa</a></div>
+    </div>
+    <div class="media">
+      <a class="grande" href="images/tabla-1.jpg" data-lb="Tabla con vela comestible"><img src="images/tabla-1.jpg" alt="Tabla de quesos, embutidos y uvas con vela comestible" loading="lazy"></a>
+      <a href="images/tabla-3.jpg" data-lb="Flores de salami y vela de mantequilla"><img src="images/tabla-3.jpg" alt="Tabla vista desde arriba" loading="lazy"></a>
+      <a href="images/tabla-2.jpg" data-lb="Lista para la mesa"><img src="images/tabla-2.jpg" alt="Tabla con vela comestible y pan" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="animalitos">
+  <div class="wrap">
+    <div class="kicker" style="text-align:center">02 · Velas aromáticas &amp; decorativas</div>
+    <h2 style="text-align:center;font-size:clamp(28px,4vw,40px);margin:12px auto 10px;max-width:16ch">Formas tiernas, aromas envolventes</h2>
+    <p style="text-align:center;color:var(--crema2);max-width:60ch;margin:0 auto 30px">Figuras de animalitos en cera aromática, perfectas como detalle, decoración o regalo. Cada pieza es única, con acabados pintados a mano y fragancias suaves.</p>
+    <div class="galeria">
+      <a href="images/cocker-labrador.jpg" data-lb="Dúo cocker &amp; labrador"><img src="images/cocker-labrador.jpg" alt="Dúo cocker y labrador" loading="lazy"><span>Dúo cocker &amp; labrador</span></a>
+      <a href="images/cocker-trio.jpg" data-lb="Trío cocker spaniel"><img src="images/cocker-trio.jpg" alt="Trío cocker spaniel" loading="lazy"><span>Trío cocker spaniel</span></a>
+      <a href="images/pug-gatito.jpg" data-lb="Pug &amp; gatito"><img src="images/pug-gatito.jpg" alt="Pug y gatito" loading="lazy"><span>Pug &amp; gatito</span></a>
+      <a href="images/caniches.jpg" data-lb="Caniches vestidos"><img src="images/caniches.jpg" alt="Caniches vestidos" loading="lazy"><span>Caniches vestidos</span></a>
+      <a href="images/vacas-highland.jpg" data-lb="Vaquitas highland"><img src="images/vacas-highland.jpg" alt="Vaquitas highland" loading="lazy"><span>Vaquitas highland</span></a>
+      <a href="images/gatos-trio.jpg" data-lb="Gaticos atigrados"><img src="images/gatos-trio.jpg" alt="Gaticos atigrados" loading="lazy"><span>Gaticos atigrados</span></a>
+      <a href="images/bulldog.jpg" data-lb="Bulldog francés"><img src="images/bulldog.jpg" alt="Bulldog francés" loading="lazy"><span>Bulldog francés</span></a>
+      <a href="images/leones.jpg" data-lb="Leoncitos"><img src="images/leones.jpg" alt="Leoncitos" loading="lazy"><span>Leoncitos</span></a>
+      <a href="images/gato-gris.jpg" data-lb="Gatito gris"><img src="images/gato-gris.jpg" alt="Gatito gris" loading="lazy"><span>Gatito gris</span></a>
+    </div>
+    <div style="text-align:center;margin-top:26px"><a class="btn btn-oro" href="#pedidos" data-linea="Animalitos aromáticos">Pedir un animalito</a></div>
+  </div>
+</section>
+
+<section id="masaje" style="background:var(--fondo2)">
+  <div class="wrap">
+    <div class="titulo"><span>03 · Para masaje &nbsp;·&nbsp; 04 · Waxmelts</span></div>
+    <div class="detalle" style="align-items:start">
+      <div>
+        <div class="kicker">Línea corporal</div>
+        <h2>Velas de masaje</h2>
+        <p>Se funden en un aceite tibio nutritivo, ideal para masajes relajantes en pareja o momentos de autocuidado.</p>
+        <ul>
+          <li>Cera de baja temperatura, segura para la piel</li>
+          <li>Aromas relajantes: lavanda, vainilla, sándalo</li>
+          <li>Presentación en vaso reutilizable</li>
+        </ul>
+        <a class="btn btn-borde" href="#pedidos" data-linea="Velas de masaje">Quiero una de masaje</a>
+      </div>
+      <div>
+        <div class="kicker">Línea ambiente</div>
+        <h2>Waxmelts</h2>
+        <p>Trozos de cera perfumada para quemadores: perfuman el hogar sin llama directa sobre mecha.</p>
+        <ul>
+          <li>Larga duración y aroma intenso</li>
+          <li>Diseños moldeados a mano</li>
+          <li>Ideal para regalos y detalles pequeños</li>
+        </ul>
+        <a class="btn btn-borde" href="#pedidos" data-linea="Waxmelts">Quiero waxmelts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="postre">
+  <div class="wrap detalle inv">
+    <div>
+      <div class="kicker">05 · Tipo postre</div>
+      <h2>Ediciones inspiradas en tu postre favorito</h2>
+      <p>Velas y presentaciones con estética de copa de chocolate, frutos rojos y bizcocho, pensadas para mesas dulces, cumpleaños y detalles especiales.</p>
+      <p>Se combinan con fresas frescas, toques de chocolate y crocantes para una experiencia completamente sensorial.</p>
+      <span class="nota">Perfectas como detalle de cumpleaños</span>
+      <div style="margin-top:22px"><a class="btn btn-oro" href="#pedidos" data-linea="Edición tipo postre">Quiero una tipo postre</a></div>
+    </div>
+    <div class="media">
+      <a class="grande" href="images/postre-brochure.jpg" data-lb="Dulce, indulgente, inolvidable"><img src="images/postre-brochure.jpg" alt="Vela tipo postre de chocolate rodeada de fresas" loading="lazy"></a>
+      <a href="images/cheesecake-1.jpg" data-lb="Cheesecake de fresa"><img src="images/cheesecake-1.jpg" alt="Cheesecake de fresa" loading="lazy"></a>
+      <a href="images/cheesecake-2.jpg" data-lb="Fresas y coulis"><img src="images/cheesecake-2.jpg" alt="Detalle de fresas sobre cheesecake" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="flores" style="background:var(--fondo2)">
+  <div class="wrap detalle">
+    <div>
+      <div class="kicker">06 · Edición flores &amp; cristal</div>
+      <h2>Cada vela, un jardín en miniatura</h2>
+      <p>Presentadas en vaso de vidrio, esta línea combina cera de color suave (verde salvia, lavanda y más) con flores talladas a mano en la superficie: girasol, margarita y texturas tipo geoda.</p>
+      <p>Una pieza decorativa que también perfuma el ambiente, en vaso reutilizable que queda como detalle permanente incluso después de consumida la vela.</p>
+      <ul>
+        <li><b style="font-weight:500;color:var(--crema)">Textura tipo geoda:</b> cera translúcida en capas irregulares, un juego de luz distinto cada vez que se enciende. Tonos cálidos (ámbar, coral) y fríos (lavanda, menta).</li>
+      </ul>
+      <span class="nota">Ideal como pieza decorativa de autor</span>
+      <div style="margin-top:22px"><a class="btn btn-oro" href="#pedidos" data-linea="Edición flores y cristal">Quiero una de flores o geoda</a></div>
+    </div>
+    <div class="media">
+      <a class="grande" href="images/flores-vaso.jpg" data-lb="Girasol &amp; margarita · edición flores"><img src="images/flores-vaso.jpg" alt="Velas en vaso con girasol y margarita" loading="lazy"></a>
+      <a class="grande" href="images/geoda.jpg" data-lb="Efecto cristal · tono atardecer"><img src="images/geoda.jpg" alt="Vela con textura tipo geoda en tono atardecer" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="titulo"><span>Cómo se vive la experiencia</span></div>
+    <div class="pasos">
+      <div class="paso"><div class="rom">I.</div><h3>Se enciende</h3><p>Colocamos la vela en el centro de tu mesa o espacio; la mecha se prende al instante.</p></div>
+      <div class="paso"><div class="rom">II.</div><h3>Se disfruta</h3><p>Aromas, texturas y compañías se despliegan mientras la vela cumple su función.</p></div>
+      <div class="paso"><div class="rom">III.</div><h3>Se saborea o se siente</h3><p>Según la línea: se unta en pan, perfuma el ambiente o relaja tu piel.</p></div>
+    </div>
+    <div class="ideal" style="margin-top:26px">
+      <em>Ideal para</em>
+      <span>Regalos</span><span>Detalles corporativos</span><span>Cumpleaños</span><span>Cenas &amp; eventos</span><span>Autocuidado</span><span>Bodas</span><span>Decoración del hogar</span>
+    </div>
+  </div>
+</section>
+
+<section id="pedidos" style="background:var(--fondo2)">
+  <div class="wrap pedido">
+    <div>
+      <div class="kicker">Pedidos &amp; contacto</div>
+      <h2 style="font-size:clamp(28px,4vw,40px);margin:12px 0 14px">Cuéntanos qué vela quieres</h2>
+      <p style="color:var(--crema2);max-width:52ch">Cada pedido se hace a mano y en pequeños lotes. Escríbenos por WhatsApp con la línea que te interesa, la cantidad y la fecha en que la necesitas, y te confirmamos disponibilidad y valor.</p>
+      <div class="contacto">
+        <a href="https://wa.me/573133372841" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.8.5a2.4 2.4 0 0 0 1.6-1.1c.2-.6.2-1 .1-1.1l-.5-.3z"/></svg></span>
+          <span><b>313 337 2841</b><small>WhatsApp · pedidos y cotizaciones</small></span>
+        </a>
+        <a href="https://instagram.com/candlevelvetflame" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+          <span><b>@candlevelvetflame</b><small>Instagram · novedades y ediciones limitadas</small></span>
+        </a>
+        <a href="#" onclick="return false">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><b>Bogotá, Colombia</b><small>Taller artesanal · entregas en la ciudad</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo" style="font-size:18px">Velvet <i>Flame</i></span>
+    <span>313 337 2841 · @candlevelvetflame · Bogotá · Hecho a mano, en pequeños lotes</span>
+  </div>
+</footer>
+
+<a class="flot" href="https://wa.me/573133372841?text=Hola%20Velvet%20Flame%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.8.5a2.4 2.4 0 0 0 1.6-1.1c.2-.6.2-1 .1-1.1l-.5-.3z"/></svg>
+  <span>Pedir</span>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="cerrar" aria-label="Cerrar">×</button>
+  <button class="fl izq" aria-label="Anterior">‹</button>
+  <img alt="">
+  <button class="fl der" aria-label="Siguiente">›</button>
+  <div class="pie"></div>
+</div>
+
+<script>
+// Lightbox: cualquier <a data-lb> abre la foto grande; flechas y Esc funcionan
+(function(){
+  var links=[].slice.call(document.querySelectorAll('a[data-lb]')), lb=document.getElementById('lb'), img=lb.querySelector('img'), pie=lb.querySelector('.pie'), i=0;
+  function ver(n){ i=(n+links.length)%links.length; img.src=links[i].getAttribute('href'); img.alt=links[i].querySelector('img').alt; pie.innerHTML=links[i].getAttribute('data-lb')||''; lb.classList.add('on'); document.body.style.overflow='hidden'; }
+  function cerrar(){ lb.classList.remove('on'); document.body.style.overflow=''; }
+  links.forEach(function(a,n){ a.addEventListener('click',function(e){ e.preventDefault(); ver(n); }); });
+  lb.querySelector('.cerrar').onclick=cerrar;
+  lb.querySelector('.izq').onclick=function(){ ver(i-1); };
+  lb.querySelector('.der').onclick=function(){ ver(i+1); };
+  lb.addEventListener('click',function(e){ if(e.target===lb) cerrar(); });
+  document.addEventListener('keydown',function(e){ if(!lb.classList.contains('on')) return; if(e.key==='Escape') cerrar(); if(e.key==='ArrowLeft') ver(i-1); if(e.key==='ArrowRight') ver(i+1); });
+})();
+// Los botones "Quiero..." abren WhatsApp con la línea ya escrita en el mensaje
+document.querySelectorAll('a[data-linea]').forEach(function(a){
+  a.href='https://wa.me/573133372841?text='+encodeURIComponent('Hola Velvet Flame, quiero hacer un pedido.
+Me interesa: '+a.getAttribute('data-linea'));
+  a.target='_blank'; a.rel='noopener';
+});
+</script>
+</body>
+</html>
